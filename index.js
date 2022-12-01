@@ -77,6 +77,11 @@ app.post('/post2D', async (req,res) =>{
     }
   })
 
+app.all('/', (req, res) => {
+    console.log("Just got a request!")
+    res.send('Let us GOOOO!')
+})
+
   //8999 番ポートでサーバーを起動しています。
 app.listen(8999, () => {
 

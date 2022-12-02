@@ -1,6 +1,7 @@
 
 // const { clientId, guildId, token, publicKey } = require('./config.json');
-require('dotenv').config() //以下の process.env で環境変数を定義するための箱を作る
+require('dotenv').config();
+//以下の process.env で環境変数を定義するための箱を作る
 //process.env で必要な4項目　ボットID,ボットのトークン、ボットのパブリックキー、ディスコードのサーバーIDをセット
 const APPLICATION_ID = process.env.APPLICATION_ID 
 const TOKEN = process.env.TOKEN 

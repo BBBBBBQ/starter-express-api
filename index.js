@@ -41,7 +41,7 @@ const discord_api = axios.create({
 //相対パス ('/post2D') を持つ HTTP POST リクエストがあるたびに呼び出されるコールバック関数を指定します。
 app.post('/post2D', async (req,res) =>{
     
-  let {embedmatelials} = req.body
+  //let {embedmatelials} = req.body
     console.log("post2Dのリクエストが来たよ")
     const interaction = req.body;   //bodyの中身は、embの中身がくる req.body; 
 
@@ -75,14 +75,14 @@ app.post('/post2D', async (req,res) =>{
     // };
 
     console.log("リクエストの中身は→" + interaction.title)
-    try
-    {
+    // try
+    // {
     return res.send({
           type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
           data: {
             embeds: [{
               "title": "Hello, Embed!",
-              "description": "お知らせ来てるでー"
+              "description": "This is an embedded message."
         }]	
           //   embeds: [{
           //     "title": `SALE`,
@@ -110,11 +110,12 @@ app.post('/post2D', async (req,res) =>{
         },
       });
 
-    }catch(e){    //だめならエラー出す
-      console.error(e.code)
-      console.error(e.response?.data)
-      return res.send(`${e.code} error from discord`)
-    }
+    // }catch(e){    //だめならエラー出す
+    //   console.error(e.code)
+    //   console.error(e.response?.data)
+    //   console.log("error from discord")
+    //   return res.send(`${e.code} error from discord`)
+    // }
   })
 
   app.all('/', (req, res) => {
@@ -125,5 +126,5 @@ app.post('/post2D', async (req,res) =>{
   //8999 番ポートでサーバーを起動しています。
 app.listen(8999, () => {
   //app.listen(3000, () => {
-  console.log("起動中")
+  console.log("listening.........")
 })

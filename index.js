@@ -98,7 +98,7 @@ const runSalesBot = async () => {
                     
                     // await postSaleToDiscord(metadata.name, price, dateString, signature, metadata.image)
                     //await axios.post('http://localhost:3000/post2D',embMaterials)
-                    await axios.post('https://baby-blue-meerkat-tie.cyclic.app/post2D',embMaterials)
+                    await axios.post('https://fair-ruby-rattlesnake-cap.cyclic.app/post2D',embMaterials)
                     
                     console.log("さん")
                     console.log("embedの中身→→" + embMaterials.title + embMaterials.imageURL);

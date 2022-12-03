@@ -1,7 +1,7 @@
 //これはpostToBot.js
 
-//import express from "express";
-//import axios from 'axios';
+// import express from "express";
+// import axios from 'axios';
 
 
 // const { clientId, guildId, token, publicKey } = require('./config.json');
@@ -48,31 +48,31 @@ app.post('/post2D', async (req,res) =>{
     //console.log(interaction.title + "投稿します")
 
     //⭕embのところは、server.jsを参考に構成したからエラーになったら要注意
-    let emb = {
-        embeds: [{
-          "title": `SALE`,
-          "description": `${interaction.title}`,
-          "fields": [
-              {
-                  "name": "Price",
-                  "value": `${interaction.price} SOL`,
-                  "inline": true
-              },
-              {
-                  "name": "Date",
-                  "value": `${interaction.date}`,
-                  "inline": true
-              },
-              {
-                  "name": "Explorer",
-                  "value": `https://explorer.solana.com/tx/${interaction.signature}`
-              }
-          ],
-          "image": {
-              "url": `${interaction.imageURL}`,
-          }
-      }]	
-    };
+    // let emb = {
+    //     embeds: [{
+    //       "title": `SALE`,
+    //       "description": `${interaction.title}`,
+    //       "fields": [
+    //           {
+    //               "name": "Price",
+    //               "value": `${interaction.price} SOL`,
+    //               "inline": true
+    //           },
+    //           {
+    //               "name": "Date",
+    //               "value": `${interaction.date}`,
+    //               "inline": true
+    //           },
+    //           {
+    //               "name": "Explorer",
+    //               "value": `https://explorer.solana.com/tx/${interaction.signature}`
+    //           }
+    //       ],
+    //       "image": {
+    //           "url": `${interaction.imageURL}`,
+    //       }
+    //   }]	
+    // };
 
     console.log("リクエストの中身は→" + interaction.title)
     try
@@ -81,28 +81,32 @@ app.post('/post2D', async (req,res) =>{
           type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
           data: {
             embeds: [{
-              "title": `SALE`,
-              "description": `${interaction.title}`,
-              "fields": [
-                  {
-                      "name": "Price",
-                      "value": `${interaction.price} SOL`,
-                      "inline": true
-                  },
-                  {
-                      "name": "Date",
-                      "value": `${interaction.date}`,
-                      "inline": true
-                  },
-                  {
-                      "name": "Explorer",
-                      "value": `https://explorer.solana.com/tx/${interaction.signature}`
-                  }
-              ],
-              "image": {
-                  "url": `${interaction.imageURL}`,
-              }
-          }]	
+              "title": "Hello, Embed!",
+              "description": "お知らせ来てるでー"
+        }]	
+          //   embeds: [{
+          //     "title": `SALE`,
+          //     "description": `${interaction.title}`,
+          //     "fields": [
+          //         {
+          //             "name": "Price",
+          //             "value": `${interaction.price} SOL`,
+          //             "inline": true
+          //         },
+          //         {
+          //             "name": "Date",
+          //             "value": `${interaction.date}`,
+          //             "inline": true
+          //         },
+          //         {
+          //             "name": "Explorer",
+          //             "value": `https://explorer.solana.com/tx/${interaction.signature}`
+          //         }
+          //     ],
+          //     "image": {
+          //         "url": `${interaction.imageURL}`,
+          //     }
+          // }]	
         },
       });
 

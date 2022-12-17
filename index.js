@@ -16,6 +16,7 @@ let mostRecentTxn = ""
 //HE///
 const pollingInterval = 20000; // ms
 
+//express()のコマンドはここ
 app.all('/', (req, res) => {
     console.log("Just got a request!")
     res.send('Yo!')
@@ -25,6 +26,7 @@ app.get('/go', (req, res) => {
     runSalesBot();
 })
 app.listen(process.env.PORT || 3000)
+//express()のコマンドはここ
 
 const runSalesBot = async () => {
     console.log("starting sales bot...");

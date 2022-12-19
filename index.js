@@ -67,7 +67,7 @@ const runSalesBot = async () => {
                                 }
                             // await postSaleToDiscord(metadata.name, price, dateString, signature, metadata.image) //元のポスト用
                             //await axios.post('http://localhost:3000/post2D',embMaterials) //ローカルでテストする時用
-                            await axios.post('https://baby-blue-meerkat-tie.cyclic.app/post2D',embMaterials)
+                            await axios.post('https://long-tan-hippopotamus-veil.cyclic.app/sales_post',embMaterials)
                             console.log("embedの中身→→" + embMaterials.title + embMaterials.imageURL); //embMaterialsにちゃんと入っているかコンソールに出して確認する
                             await timer(pollingInterval);
                             }

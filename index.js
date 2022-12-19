@@ -13,6 +13,7 @@ const address = "Fxjy8g9ABo8ZcZEh8B3M21fZdz8Sb56mVBpBznKynw6B" //ロイヤリテ
 const resource = "nft-events"
 const options = `api-key=c4b5b565-3a26-45e2-b28c-e3c96cbae8c1&type=NFT_SALE` //APIキーを入れる
 let mostRecentTxn = ""
+let lastKnownSignature = ""
 //HE///
 const pollingInterval = 20000; // ms
 

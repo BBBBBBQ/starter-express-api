@@ -60,11 +60,11 @@ const runSalesBot = async () => {
                             printSalesInfo(dateString, price, data[i].signature, metadata.name, data[i].source, metadata.image); //コンソールに投稿する予定の内容を出してあげる
                             var embMaterials = 
                                 {
-                                    title: metadata.name,
-                                    price: price,
-                                    date: dateString,
-                                    signature: data[i].signature,
-                                    imageURL: metadata.image
+                                    "title": metadata.name,
+                                    "price": price,
+                                    "date": dateString,
+                                    "signature": data[i].signature,
+                                    "imageURL": metadata.image
                                 }
                             // await postSaleToDiscord(metadata.name, price, dateString, signature, metadata.image) //元のポスト用
                             //await axios.post('http://localhost:3000/post2D',embMaterials) //ローカルでテストする時用
